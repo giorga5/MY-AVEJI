@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "my-aveji-site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".claude/dev-server.js"],
+      "port": 3000
+    }
+  ]
+}
