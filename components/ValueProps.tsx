@@ -32,7 +32,7 @@ export default function ValueProps() {
               </svg>
             </div>
             <h3>პირადი კონსულტაცია</h3>
-            <p>მოგვინახულეთ სავაჭრო ცენტრ საბაში პროდუქციის ნახვისთვის.</p>
+            <p>მოგვინახულეთ სავაჭრო ცენტრ საბაში პროდუქციის სანახავად.</p>
           </div>
           <div className="value-card">
             <div className="value-icon">
