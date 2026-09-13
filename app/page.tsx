@@ -1,7 +1,6 @@
 import { getCategories, getVisibleProducts, getSiteSettings } from "@/lib/data";
 import SiteHeader from "@/components/SiteHeader";
 import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
 import ValueProps from "@/components/ValueProps";
 import CategoriesGrid from "@/components/CategoriesGrid";
 import ProductsGrid from "@/components/ProductsGrid";
@@ -34,7 +33,6 @@ export default async function HomePage() {
           }
           logoSrc="/Media/logo.jpg"
         />
-        <AboutSection aboutText={settings?.about_text ?? null} />
         <ValueProps />
         <CategoriesGrid categories={categories} />
         <ProductsGrid products={products} />
