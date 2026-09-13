@@ -8,7 +8,7 @@ export default function CategoriesGrid({ categories }: { categories: Category[] 
         <div className="section-head center">
           <span className="eyebrow">ჩვენი ასორტიმენტი</span>
           <h2>კატეგორიები</h2>
-          <p>აირჩიეთ კატეგორია და იხილეთ ჩვენი პროდუქციის მაგალითები ქვემოთ.</p>
+          <p>აირჩიეთ კატეგორია.</p>
         </div>
 
         {categories.length > 0 ? (

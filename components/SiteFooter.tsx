@@ -22,7 +22,7 @@ export default function SiteFooter({ settings }: { settings: SiteSettings | null
               {storeName}
               <span>{tagline}</span>
             </span>
-            <p>ხარისხიანი ავეჯი თქვენი სახლისთვის — დივნები, მაგიდები, საწოლები და კარადები, ერთ სივრცეში.</p>
+            <p>ხარისხიანი ავეჯი თქვენი სახლისთვის.</p>
             {(facebookUrl || instagramUrl || whatsappLink) && (
               <div className="social-row">
                 {whatsappLink && (
