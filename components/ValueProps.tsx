@@ -23,7 +23,7 @@ export default function ValueProps() {
               </svg>
             </div>
             <h3>მიწოდება თბილისში</h3>
-            <p>სწრაფი მიწოდება და აწყობა თბილისის მასშტაბით.</p>
+            <p>სწრაფი მიწოდება და აწყობა მხოლოდ თბილისის მასშტაბით.</p>
           </div>
           <div className="value-card">
             <div className="value-icon">
