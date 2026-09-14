@@ -67,7 +67,7 @@ export default function ProductsCatalog({ categories, products }: ProductsCatalo
         <div className="section-head center">
           <span className="eyebrow">კატალოგი</span>
           <h2>{activeCategory ? activeCategory.name : "ყველა პროდუქტი"}</h2>
-          <p>დაათვალიერეთ ჩვენი სრული ასორტიმენტი — გამოიყენეთ ფილტრები სასურველის სწრაფად საპოვნელად.</p>
+          <p>დაათვალიერეთ ჩვენი სრული კატალოგი.</p>
         </div>
 
         <div className="catalog-filters">
