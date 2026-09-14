@@ -56,13 +56,16 @@ export default function SiteFooter({ settings }: { settings: SiteSettings | null
             <h4>ნავიგაცია</h4>
             <ul>
               <li>
-                <a href="#home">მთავარი გვერდი</a>
+                <a href="/#home">მთავარი გვერდი</a>
               </li>
               <li>
-                <a href="#categories">კატეგორიები</a>
+                <a href="/#categories">კატეგორიები</a>
               </li>
               <li>
-                <a href="#contact">კონტაქტი</a>
+                <a href="/products">კატალოგი</a>
+              </li>
+              <li>
+                <a href="/#contact">კონტაქტი</a>
               </li>
             </ul>
           </div>

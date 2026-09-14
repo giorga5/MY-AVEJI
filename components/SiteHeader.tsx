@@ -43,7 +43,7 @@ export default function SiteHeader({ storeName, tagline, logoSrc }: SiteHeaderPr
   return (
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
       <div className="container">
-        <a href="#top" className="brand" aria-label={`${storeName} — მთავარი გვერდი`}>
+        <a href="/#top" className="brand" aria-label={`${storeName} — მთავარი გვერდი`}>
           <span className="brand-mark">
             <Image src={logoSrc} alt={`${storeName} ლოგო`} width={44} height={44} />
           </span>
@@ -54,13 +54,16 @@ export default function SiteHeader({ storeName, tagline, logoSrc }: SiteHeaderPr
         </a>
 
         <nav className={`main-nav${isOpen ? " is-open" : ""}`} id="main-nav" aria-label="მთავარი ნავიგაცია">
-          <a href="#home" onClick={() => setIsOpen(false)}>
+          <a href="/#home" onClick={() => setIsOpen(false)}>
             მთავარი გვერდი
           </a>
-          <a href="#categories" onClick={() => setIsOpen(false)}>
+          <a href="/#categories" onClick={() => setIsOpen(false)}>
             კატეგორიები
           </a>
-          <a href="#contact" className="btn btn-primary btn-sm" onClick={() => setIsOpen(false)}>
+          <a href="/products" onClick={() => setIsOpen(false)}>
+            კატალოგი
+          </a>
+          <a href="/#contact" className="btn btn-primary btn-sm" onClick={() => setIsOpen(false)}>
             კონტაქტი
           </a>
         </nav>

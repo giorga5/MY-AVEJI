@@ -14,7 +14,7 @@ export default function CategoriesGrid({ categories }: { categories: Category[] 
         {categories.length > 0 ? (
           <div className="categories-grid">
             {categories.map((c) => (
-              <a href="#products" className="category-card" key={c.id}>
+              <a href={`/products?category=${c.id}`} className="category-card" key={c.id}>
                 <span className="category-icon">
                   <CategoryIcon iconKey={c.icon_key} />
                 </span>

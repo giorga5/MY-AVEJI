@@ -12,11 +12,18 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
         </div>
 
         {products.length > 0 ? (
-          <div className="products-grid">
-            {products.map((p) => (
-              <ProductCard product={p} key={p.id} />
-            ))}
-          </div>
+          <>
+            <div className="products-grid">
+              {products.map((p) => (
+                <ProductCard product={p} key={p.id} />
+              ))}
+            </div>
+            <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+              <a href="/products" className="btn btn-primary">
+                სრული კატალოგის ნახვა
+              </a>
+            </div>
+          </>
         ) : (
           <p style={{ textAlign: "center", color: "var(--color-text-muted)" }}>
             მალე დაემატება პროდუქცია.
