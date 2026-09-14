@@ -18,10 +18,10 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   chair: (
     <>
-      <path d="M6 3v8" />
-      <path d="M6 7h9" />
-      <rect x="6" y="11" width="12" height="3" rx="1" />
-      <path d="M7.5 14v6M16.5 14v6" />
+      <path d="M7 4v7M17 4v7" />
+      <path d="M7 6h10" />
+      <rect x="5.5" y="11" width="13" height="3.2" rx="1" />
+      <path d="M7 14.2v5.8M17 14.2v5.8" />
     </>
   ),
   bed: (
@@ -63,11 +63,10 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   "entry-cabinet": (
     <>
-      <rect x="5" y="7" width="14" height="14" rx="1.5" />
-      <path d="M8 7V4M12 7V4M16 7V4" />
-      <circle cx="8" cy="3.2" r="0.9" fill="currentColor" stroke="none" />
-      <circle cx="12" cy="3.2" r="0.9" fill="currentColor" stroke="none" />
-      <circle cx="16" cy="3.2" r="0.9" fill="currentColor" stroke="none" />
+      <rect x="4" y="3" width="16" height="18" rx="1.5" />
+      <path d="M12 6.5v1.3" />
+      <path d="M8 11.5c0-2.2 1.8-3.7 4-3.7s4 1.5 4 3.7" />
+      <path d="M6.5 11.5h11" />
     </>
   ),
   vanity: (
@@ -90,11 +89,10 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   outdoor: (
     <>
-      <circle cx="17.5" cy="5.5" r="2" />
-      <path d="M17.5 2v1M17.5 8v1M14.5 5.5h-1M20.5 5.5h-1" />
-      <path d="M3 19.5v-6a1.5 1.5 0 0 1 1.5-1.5H10a1.5 1.5 0 0 1 1.5 1.5v6" />
-      <path d="M3 15.5h8.5" />
-      <path d="M3 19.5v1.5M11.5 19.5v1.5" />
+      <path d="M12 3c4.7 0 8.5 3.2 8.5 6.8H3.5C3.5 6.2 7.3 3 12 3Z" />
+      <path d="M6.7 9.8c0 .9-.7 1.6-1.6 1.6M12.8 9.8c0 .9.6 1.6 1.6 1.6M18.8 9.8c0 .9-.7 1.6-1.6 1.6" />
+      <path d="M12 6.6V20" />
+      <path d="M12 20c0 1-.9 1.7-1.8 1.4" />
     </>
   ),
   "office-storage": (
@@ -107,10 +105,10 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   "office-chair": (
     <>
-      <rect x="7" y="4" width="10" height="6" rx="1.2" />
-      <path d="M8 10v3h8v-3" />
-      <path d="M12 13v4" />
-      <path d="M12 17l-4 3M12 17l4 3M12 17l-5.5-1M12 17l5.5-1" />
+      <rect x="8" y="3" width="8" height="8" rx="2.5" />
+      <rect x="7" y="12" width="10" height="2.6" rx="1" />
+      <path d="M12 14.6v3" />
+      <path d="M8 21l2.2-2.7h3.6L16 21" />
     </>
   ),
   shelf: (
