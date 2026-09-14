@@ -89,10 +89,10 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   outdoor: (
     <>
-      <path d="M12 3c4.7 0 8.5 3.2 8.5 6.8H3.5C3.5 6.2 7.3 3 12 3Z" />
-      <path d="M6.7 9.8c0 .9-.7 1.6-1.6 1.6M12.8 9.8c0 .9.6 1.6 1.6 1.6M18.8 9.8c0 .9-.7 1.6-1.6 1.6" />
-      <path d="M12 6.6V20" />
-      <path d="M12 20c0 1-.9 1.7-1.8 1.4" />
+      <path d="M16 4 8 11l9.5 2" />
+      <path d="M17.5 13l-2 8" />
+      <path d="M8 11l-3 10" />
+      <path d="M9.5 9.3l4 .9" />
     </>
   ),
   "office-storage": (
