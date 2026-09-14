@@ -89,10 +89,9 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   outdoor: (
     <>
-      <path d="M16 4 8 11l9.5 2" />
-      <path d="M17.5 13l-2 8" />
-      <path d="M8 11l-3 10" />
-      <path d="M9.5 9.3l4 .9" />
+      <path d="M6 20 17 6" />
+      <path d="M18 20 7 6" />
+      <path d="M8 8h8" />
     </>
   ),
   "office-storage": (
@@ -141,10 +140,8 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   "wall-shelf": (
     <>
-      <path d="M5.5 3c-1.2.5-2 1.4-2 2.8V21" />
-      <rect x="7" y="9" width="6" height="6" rx="0.5" />
-      <rect x="13" y="12" width="6" height="6" rx="0.5" />
-      <path d="M3.5 21h17" />
+      <path d="M4 3V9H11V14H17V21" />
+      <path d="M3 21H20" />
     </>
   ),
   default: (
