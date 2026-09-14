@@ -18,10 +18,10 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   chair: (
     <>
-      <path d="M7 4v7M17 4v7" />
-      <path d="M7 6h10" />
-      <rect x="5.5" y="11" width="13" height="3.2" rx="1" />
-      <path d="M7 14.2v5.8M17 14.2v5.8" />
+      <path d="M7.5 12V8a4.5 4.5 0 0 1 9 0v4" />
+      <path d="M10 8v4M14 8v4" />
+      <rect x="6.5" y="12" width="11" height="3" rx="1.2" />
+      <path d="M8 15v5.5M16 15v5.5" />
     </>
   ),
   bed: (
