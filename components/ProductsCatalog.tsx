@@ -6,7 +6,7 @@ import ProductCard from "./ProductCard";
 import CategoryIcon from "./CategoryIcon";
 import type { Category, Product } from "@/lib/types";
 
-type SortOption = "default" | "price-asc" | "price-desc" | "name-asc";
+type SortOption = "default" | "price-asc" | "price-desc";
 
 interface ProductsCatalogProps {
   categories: Category[];
@@ -54,7 +54,6 @@ export default function ProductsCatalog({ categories, products }: ProductsCatalo
     result = [...result];
     if (sort === "price-asc") result.sort((a, b) => a.price - b.price);
     else if (sort === "price-desc") result.sort((a, b) => b.price - a.price);
-    else if (sort === "name-asc") result.sort((a, b) => a.name.localeCompare(b.name, "ka"));
     else result.sort((a, b) => a.sort_order - b.sort_order);
 
     return result;
@@ -113,7 +112,6 @@ export default function ProductsCatalog({ categories, products }: ProductsCatalo
               <option value="default">დალაგება: ჩვეულებრივი</option>
               <option value="price-asc">ფასი: დაბლიდან მაღლა</option>
               <option value="price-desc">ფასი: მაღლიდან დაბლა</option>
-              <option value="name-asc">სახელით (ა-ჰ)</option>
             </select>
           </div>
         </div>
