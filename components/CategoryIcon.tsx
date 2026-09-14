@@ -63,10 +63,12 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   "entry-cabinet": (
     <>
-      <rect x="4" y="3" width="16" height="18" rx="1.5" />
-      <path d="M12 6.5v1.3" />
-      <path d="M8 11.5c0-2.2 1.8-3.7 4-3.7s4 1.5 4 3.7" />
-      <path d="M6.5 11.5h11" />
+      <rect x="3.5" y="2.5" width="17" height="18.5" rx="1.5" />
+      <path d="M12 2.5v13" />
+      <path d="M3.5 15.5h17" />
+      <path d="M10.8 8.5v2.5M13.2 8.5v2.5" />
+      <path d="M10 18.2h4" />
+      <path d="M6 21v1.5M18 21v1.5" />
     </>
   ),
   vanity: (
@@ -78,12 +80,13 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   bedroom: (
     <>
-      <rect x="3.5" y="2.5" width="17" height="18.5" rx="1.5" />
-      <path d="M12 2.5v13" />
-      <path d="M3.5 15.5h17" />
-      <path d="M10.8 8.5v2.5M13.2 8.5v2.5" />
-      <path d="M10 18.2h4" />
-      <path d="M6 21v1.5M18 21v1.5" />
+      <path d="M2.5 17v-4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4" />
+      <path d="M2.5 14.5h10" />
+      <rect x="3.5" y="8.5" width="4" height="3" rx="0.8" />
+      <path d="M2.5 17v2" />
+      <rect x="15.5" y="12" width="4" height="5" rx="0.8" />
+      <path d="M17.5 12V9.5" />
+      <path d="M16 9.5h3" />
     </>
   ),
   outdoor: (
