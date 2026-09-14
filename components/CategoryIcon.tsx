@@ -134,9 +134,9 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   "tv-wall-unit": (
     <>
-      <rect x="2.5" y="9" width="19" height="6" rx="1" />
-      <path d="M2.5 12h19" />
-      <path d="M6 9V6a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3" />
+      <rect x="2.5" y="3" width="19" height="18" rx="1.2" />
+      <path d="M9 3v18M15 3v18" />
+      <rect x="9.8" y="9.3" width="4.4" height="4" rx="0.5" />
     </>
   ),
   "wall-shelf": (

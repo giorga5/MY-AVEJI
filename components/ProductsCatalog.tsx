@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ProductCard from "./ProductCard";
 import CategoryIcon from "./CategoryIcon";
@@ -20,12 +20,55 @@ export default function ProductsCatalog({ categories, products }: ProductsCatalo
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") ?? "all");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<SortOption>("default");
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollWrapRef = useRef<HTMLDivElement>(null);
 
   // Keep local state in sync if the URL changes from elsewhere (e.g. a
   // category link clicked again while already on this page).
   useEffect(() => {
     setSelectedCategory(searchParams.get("category") ?? "all");
   }, [searchParams]);
+
+  // Convert vertical mouse-wheel scrolling into horizontal scrolling over
+  // the category strip, and fade the edges to hint there's more to scroll.
+  useEffect(() => {
+    const el = scrollRef.current;
+    const wrap = scrollWrapRef.current;
+    if (!el || !wrap) return;
+
+    function updateEdges() {
+      if (!el || !wrap) return;
+      const atStart = el.scrollLeft <= 1;
+      const atEnd = el.scrollLeft >= el.scrollWidth - el.clientWidth - 1;
+      wrap.classList.toggle("is-start", atStart);
+      wrap.classList.toggle("is-end", atEnd);
+    }
+
+    function onWheel(e: WheelEvent) {
+      if (!el) return;
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        el.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    }
+
+    updateEdges();
+    el.addEventListener("scroll", updateEdges, { passive: true });
+    el.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("resize", updateEdges);
+    return () => {
+      el.removeEventListener("scroll", updateEdges);
+      el.removeEventListener("wheel", onWheel);
+      window.removeEventListener("resize", updateEdges);
+    };
+  }, [categories]);
+
+  // Scroll the active pill into view when the category changes, e.g. from
+  // a deep link like /products?category=<id>.
+  useEffect(() => {
+    const active = scrollRef.current?.querySelector<HTMLButtonElement>(".catalog-pill.is-active");
+    active?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }, [selectedCategory]);
 
   function handleCategoryClick(categoryId: string) {
     setSelectedCategory(categoryId);
@@ -71,27 +114,29 @@ export default function ProductsCatalog({ categories, products }: ProductsCatalo
         </div>
 
         <div className="catalog-filters">
-          <div className="catalog-categories">
-            <button
-              type="button"
-              className={`catalog-pill${selectedCategory === "all" ? " is-active" : ""}`}
-              onClick={() => handleCategoryClick("all")}
-            >
-              ყველა
-            </button>
-            {categories.map((c) => (
+          <div className="catalog-categories-wrap" ref={scrollWrapRef}>
+            <div className="catalog-categories" ref={scrollRef}>
               <button
-                key={c.id}
                 type="button"
-                className={`catalog-pill${selectedCategory === c.id ? " is-active" : ""}`}
-                onClick={() => handleCategoryClick(c.id)}
+                className={`catalog-pill${selectedCategory === "all" ? " is-active" : ""}`}
+                onClick={() => handleCategoryClick("all")}
               >
-                <span className="catalog-pill-icon">
-                  <CategoryIcon iconKey={c.icon_key} />
-                </span>
-                {c.name}
+                ყველა
               </button>
-            ))}
+              {categories.map((c) => (
+                <button
+                  key={c.id}
+                  type="button"
+                  className={`catalog-pill${selectedCategory === c.id ? " is-active" : ""}`}
+                  onClick={() => handleCategoryClick(c.id)}
+                >
+                  <span className="catalog-pill-icon">
+                    <CategoryIcon iconKey={c.icon_key} />
+                  </span>
+                  {c.name}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="catalog-controls">
