@@ -46,6 +46,108 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
       <path d="M8 21h8" />
     </>
   ),
+  dresser: (
+    <>
+      <rect x="4" y="3" width="16" height="18" rx="1.5" />
+      <path d="M4 9h16M4 15h16" />
+      <path d="M8 6h2M8 12h2M8 18h2" />
+    </>
+  ),
+  "tv-stand": (
+    <>
+      <rect x="2.5" y="14" width="19" height="5" rx="1" />
+      <path d="M4 19v2M20 19v2" />
+      <rect x="7" y="4" width="10" height="7" rx="1" />
+      <path d="M9 11v1.5M15 11v1.5" />
+    </>
+  ),
+  "entry-cabinet": (
+    <>
+      <rect x="5" y="7" width="14" height="14" rx="1.5" />
+      <path d="M8 7V4M12 7V4M16 7V4" />
+      <circle cx="8" cy="3.2" r="0.9" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="3.2" r="0.9" fill="currentColor" stroke="none" />
+      <circle cx="16" cy="3.2" r="0.9" fill="currentColor" stroke="none" />
+    </>
+  ),
+  vanity: (
+    <>
+      <rect x="4" y="13" width="16" height="3" rx="1" />
+      <path d="M6.5 16v5M17.5 16v5" />
+      <path d="M9 13V6a3 3 0 0 1 6 0v7" />
+    </>
+  ),
+  bedroom: (
+    <>
+      <path d="M2.5 17v-4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4" />
+      <path d="M2.5 14.5h10" />
+      <rect x="3.5" y="8.5" width="4" height="3" rx="0.8" />
+      <path d="M2.5 17v2" />
+      <rect x="15.5" y="12" width="4" height="5" rx="0.8" />
+      <path d="M17.5 12V9.5" />
+      <path d="M16 9.5h3" />
+    </>
+  ),
+  outdoor: (
+    <>
+      <circle cx="17.5" cy="5.5" r="2" />
+      <path d="M17.5 2v1M17.5 8v1M14.5 5.5h-1M20.5 5.5h-1" />
+      <path d="M3 19.5v-6a1.5 1.5 0 0 1 1.5-1.5H10a1.5 1.5 0 0 1 1.5 1.5v6" />
+      <path d="M3 15.5h8.5" />
+      <path d="M3 19.5v1.5M11.5 19.5v1.5" />
+    </>
+  ),
+  "office-storage": (
+    <>
+      <rect x="4" y="3" width="16" height="9" rx="1" />
+      <path d="M4 7.5h16" />
+      <rect x="4" y="12" width="16" height="9" rx="1" />
+      <path d="M11.3 15v6" />
+    </>
+  ),
+  "office-chair": (
+    <>
+      <rect x="7" y="4" width="10" height="6" rx="1.2" />
+      <path d="M8 10v3h8v-3" />
+      <path d="M12 13v4" />
+      <path d="M12 17l-4 3M12 17l4 3M12 17l-5.5-1M12 17l5.5-1" />
+    </>
+  ),
+  shelf: (
+    <>
+      <path d="M4 3v18M20 3v18" />
+      <path d="M4 8h16M4 14h16M4 20h16" />
+    </>
+  ),
+  "shoe-cabinet": (
+    <>
+      <rect x="3" y="11" width="18" height="8" rx="1.2" />
+      <path d="M3 15h18" />
+      <path d="M8 6.5c0-.9.9-1.5 2-1.3l4.5 1c1 .2 1.5.8 1.5 1.6 0 .9-.8 1.4-1.8 1.4H8.5c-.3 0-.5-.2-.5-.5Z" />
+    </>
+  ),
+  kitchen: (
+    <>
+      <rect x="3" y="10" width="18" height="10" rx="1" />
+      <path d="M3 15h18" />
+      <path d="M7 10V6a1.5 1.5 0 0 1 1.5-1.5H10" />
+      <circle cx="16" cy="6.5" r="1.3" />
+    </>
+  ),
+  "tv-wall-unit": (
+    <>
+      <rect x="2.5" y="9" width="19" height="6" rx="1" />
+      <path d="M2.5 12h19" />
+      <path d="M6 9V6a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3" />
+    </>
+  ),
+  "wall-shelf": (
+    <>
+      <path d="M21 2v20" />
+      <rect x="4" y="9" width="17" height="2.5" rx="1" />
+      <path d="M8 11.5v3M17 11.5v3" />
+    </>
+  ),
   default: (
     <>
       <rect x="4" y="4" width="7" height="7" rx="1.2" />
@@ -63,6 +165,19 @@ export const CATEGORY_ICON_OPTIONS: { value: CategoryIconKey; label: string }[] 
   { value: "bed", label: "საწოლი" },
   { value: "wardrobe", label: "კარადა" },
   { value: "lamp", label: "ნათურა" },
+  { value: "dresser", label: "კომოდი" },
+  { value: "tv-stand", label: "ტვ სადგამი" },
+  { value: "entry-cabinet", label: "შემოსასვლელის კარადა" },
+  { value: "vanity", label: "ტუალეტის მაგიდა" },
+  { value: "bedroom", label: "საძინებელი" },
+  { value: "outdoor", label: "ეზოს ავეჯი" },
+  { value: "office-storage", label: "საოფისე კარადა" },
+  { value: "office-chair", label: "საოფისე სავარძელი" },
+  { value: "shelf", label: "თარო" },
+  { value: "shoe-cabinet", label: "ფეხსაცმლის კარადა" },
+  { value: "kitchen", label: "სამზარეულო" },
+  { value: "tv-wall-unit", label: "ტვ-ს კედლის კარადა" },
+  { value: "wall-shelf", label: "კედლის თარო" },
   { value: "default", label: "ზოგადი" },
 ];
 

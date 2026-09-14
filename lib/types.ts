@@ -5,6 +5,19 @@ export type CategoryIconKey =
   | "bed"
   | "wardrobe"
   | "lamp"
+  | "dresser"
+  | "tv-stand"
+  | "entry-cabinet"
+  | "vanity"
+  | "bedroom"
+  | "outdoor"
+  | "office-storage"
+  | "office-chair"
+  | "shelf"
+  | "shoe-cabinet"
+  | "kitchen"
+  | "tv-wall-unit"
+  | "wall-shelf"
   | "default";
 
 export interface Category {
