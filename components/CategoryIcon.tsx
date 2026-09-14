@@ -141,9 +141,8 @@ const paths: Record<CategoryIconKey, React.ReactNode> = {
   ),
   "wall-shelf": (
     <>
-      <path d="M21 2v20" />
-      <rect x="4" y="9" width="17" height="2.5" rx="1" />
-      <path d="M8 11.5v3M17 11.5v3" />
+      <rect x="4" y="3" width="6" height="15" rx="0.6" />
+      <rect x="8" y="10" width="12" height="7" rx="0.6" />
     </>
   ),
   default: (
